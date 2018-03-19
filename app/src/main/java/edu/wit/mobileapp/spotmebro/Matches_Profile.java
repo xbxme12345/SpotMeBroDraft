@@ -18,7 +18,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Iterator;
 
 public class Matches_Profile extends AppCompatActivity {
@@ -34,6 +37,7 @@ public class Matches_Profile extends AppCompatActivity {
     private TextView mAvailabilityOutput  ;
     private TextView mConversationOutput ;
     private TextView mNameOutput ;
+    private TextView mGenderOutput ;
 
 
 
@@ -45,6 +49,7 @@ public class Matches_Profile extends AppCompatActivity {
 
     private ListView listview;
     private ArrayList<String> entries;
+    private String formattedDate;
 
 
     private FirebaseAuth mAuth;
@@ -60,13 +65,18 @@ public class Matches_Profile extends AppCompatActivity {
         setContentView(R.layout.activity_matches__profile);
         mAuth = FirebaseAuth.getInstance();
 
+        Date c = Calendar.getInstance().getTime();
+
+        SimpleDateFormat df = new SimpleDateFormat("dd_MMM_yyyy");
+        formattedDate = df.format(c);
+
         //mAnswerOutput = (TextView) findViewById(R.id.Answer_output);
         //mAvailabilityOutput = (TextView) findViewById(R.id.Availability_output);
         //mConversationOutput = (TextView) findViewById(R.id.Conversation_output);
         mEmailOutput = (TextView) findViewById(R.id.Email_output);
         //mSecurityOutput = (TextView) findViewById(R.id.Security_output);
         mNameOutput = (TextView) findViewById(R.id.Name_output);
-
+        mGenderOutput = (TextView) findViewById(R.id.Gender_output);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null)
@@ -87,7 +97,7 @@ public class Matches_Profile extends AppCompatActivity {
                 mEmailOutput.setText(dataSnapshot.child("Email").getValue().toString());
                 //mSecurityOutput.setText(dataSnapshot.child("Security").getValue().toString());
                 mNameOutput.setText(dataSnapshot.child("Name").getValue().toString());
-
+                mGenderOutput.setText(dataSnapshot.child("Gender").getValue().toString());
                 /*
                 try {
                     mAvailabilityOutput.setText(dataSnapshot.child("Availability").getValue().toString());
@@ -148,7 +158,7 @@ public class Matches_Profile extends AppCompatActivity {
         final String yourstuff = youremail+"-"+yourUID;
 
         myRef= FirebaseDatabase.getInstance().getReference("Messages");
-        myRef.child(' '+ otheremail +'-' + youremail ).child("MessageList").push().setValue("New Message");
+        myRef.child(' '+ otheremail +'-' + youremail ).child("MessageList").push().setValue("Started A Conversation"+"-"+MyApplication.Global_Name+"-"+formattedDate);
 
         /*
 

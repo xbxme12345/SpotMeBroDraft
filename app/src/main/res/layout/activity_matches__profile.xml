@@ -17,6 +17,23 @@
             android:orientation="horizontal">
 
             <TextView
+                android:text="Name : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/Name_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
                 android:text="Email : "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -34,18 +51,16 @@
             android:orientation="horizontal">
 
             <TextView
-                android:text="Name : "
+                android:text="Gender : "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/Name_output"
+                android:id="@+id/Gender_output"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
-
-
 
 
         <LinearLayout
@@ -68,15 +83,15 @@
                 android:id="@+id/back_sign"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Back"
-                android:onClick="GoToMain"/>
+                android:onClick="GoToMain"
+                android:text="Back" />
 
             <Button
                 android:id="@+id/newconvo"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Create a new Conversation!"
-                android:onClick="newconvo"/>
+                android:onClick="newconvo"
+                android:text="Create a new Conversation!" />
 
         </LinearLayout>
 
