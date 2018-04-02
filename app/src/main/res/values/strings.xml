@@ -33,12 +33,14 @@
     <string-array name="gender_array">
         <item>Male</item>
         <item>Female</item>
+        <item>Other</item>
         <item>NoPreference</item>
     </string-array>
 
     <string-array name="my_gender_array">
         <item>Male</item>
         <item>Female</item>
+        <item>Other</item>
     </string-array>
 
     <string-array name="Days_arrays">

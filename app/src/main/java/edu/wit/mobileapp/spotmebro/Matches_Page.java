@@ -78,11 +78,12 @@ public class Matches_Page extends AppCompatActivity
                 }
                 catch (NullPointerException i)
                 {
-                    temp = ", ";
+                    temp = ",";
                 }
                 String [] available = temp.split(",");
-                for (int i = 1; i < available.length; i++)
+                for (int i = 0; i < available.length; i++)
                 {
+                    try {
                     String[] parts = available[i].split(" ");
                     String Time = parts[1];
                     switch (Time)
@@ -128,6 +129,11 @@ public class Matches_Page extends AppCompatActivity
                     available[i] = parts[0]+ " "+parts[1]+ " "+parts[2];
 
                     AllTimes.add(available[i]);
+                    }
+                    catch(ArrayIndexOutOfBoundsException e)
+                    {
+
+                    }
                 }
                 ArrayAdapter<String> adapter = new ArrayAdapter(Matches_Page.this, android.R.layout.simple_list_item_1, AllTimes);
 
@@ -137,7 +143,7 @@ public class Matches_Page extends AppCompatActivity
                 {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
                     {
-                        if(temp != ", ")
+                        if(temp != ",")
                         {
                             String timeset = (listview.getItemAtPosition(position)).toString();
                             Intent gotoTimeMatches = new Intent(Matches_Page.this, HourMatches.class);
