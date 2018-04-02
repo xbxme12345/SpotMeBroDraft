@@ -28,8 +28,11 @@ public class ProfileEditor extends AppCompatActivity {
     DatabaseReference myRef = database.getReference("");
     DatabaseReference myRef1 = database.getReference("");
     DatabaseReference myRef2 = database.getReference("");
+    DatabaseReference myRef3 = database.getReference("");
+    DatabaseReference myRef4 = database.getReference("");
     private FirebaseAuth mAuth;
     private String uourName;
+    private String temp;
     private ArrayList<String> AllTimes;
     private boolean isthere;
 
@@ -100,7 +103,48 @@ public class ProfileEditor extends AppCompatActivity {
                 {
                     Toast.makeText(ProfileEditor.this, "Name is already used", Toast.LENGTH_LONG).show();
                 }
-                else {
+                else
+                {
+                    final String UID = mAuth.getCurrentUser().getUid().toString();
+                    myRef3 = FirebaseDatabase.getInstance().getReference("Users").child(UID).child("Availability");
+                    myRef3.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot)
+                        {
+                            try
+                            {
+                                temp = dataSnapshot.getValue().toString();
+                            }
+                            catch (NullPointerException i)
+                            {
+                                temp = ", ";
+                            }
+                            String [] available = temp.split(",");
+                            for( int i = 0; i < available.length; i++ )
+                            {
+                                try {
+                                    String[] parts = available[i].split(" ");
+                                    String Day = parts[0];
+                                    String Time = parts[1];
+                                    myRef4 = FirebaseDatabase.getInstance().getReference("").child(Day).child(Time).child(UID);
+                                    myRef4.removeValue();
+                                }
+                                catch (ArrayIndexOutOfBoundsException e)
+                                {
+
+                                }
+                            }
+                            myRef3.setValue("");
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+
+                    });
+
                     myRef2 = FirebaseDatabase.getInstance().getReference("Messages");
                     myRef2.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override

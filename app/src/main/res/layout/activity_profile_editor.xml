@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingTop="24dp"
-            android:text="If you change your name, all of your previous conversations will be deleted!"
+            android:text="If you change your name or gender, all of your previous conversations and availabilities will be deleted!"
             android:textColor="@color/colorAccent"
             android:textSize="28dp" />
 
