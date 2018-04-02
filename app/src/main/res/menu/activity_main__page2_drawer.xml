@@ -6,27 +6,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/Matches"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@android:drawable/ic_menu_myplaces"
             android:title="Your Matches" />
         <item
             android:id="@+id/PreferenceEditor"
-            android:icon="@drawable/spotmebroflex"
+            android:icon="@android:drawable/ic_menu_manage"
             android:title="Edit Your Preferences" />
         <item
             android:id="@+id/ProfileEditor"
-            android:icon="@drawable/spotmebroflex"
+            android:icon="@android:drawable/ic_menu_manage"
             android:title="Edit Your Profile" />
         <item
             android:id="@+id/Profile"
-            android:icon="@drawable/spotmebroflex"
+            android:icon="@android:drawable/ic_menu_myplaces"
             android:title="Your Profile" />
         <item
             android:id="@+id/DateAdder"
-            android:icon="@drawable/spotmebrodatetime"
+            android:icon="@android:drawable/ic_menu_my_calendar"
             android:title="Enter Your Availability" />
         <item
             android:id="@+id/Conversations"
-            android:icon="@drawable/spotmebrodatetime"
+            android:icon="@android:drawable/stat_sys_phone_call_forward"
             android:title="Go to your Converations!" />
     </group>
 

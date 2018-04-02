@@ -10,70 +10,81 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="HELP GUIDE"
         android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="53dp">
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="How to find matches?"
-            android:onClick="b1"/>
+            android:onClick="b1"
+            android:text="How to find matches?" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="How to add availabilities?"
-            android:onClick="b2"/>
+            android:onClick="b2"
+            android:text="How to add availabilities?" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="How to remove availabilities?"
-            android:onClick="b3"/>
+            android:onClick="b3"
+            android:text="How to remove availabilities?" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="How to edit preferences?"
-            android:onClick="b4"/>
+            android:onClick="b4"
+            android:text="How to edit preferences?" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="How to edit profile information?"
-            android:onClick="b5"/>
+            android:onClick="b5"
+            android:text="How to edit profile information?" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="How to create a conversation?"
-            android:onClick="b6"/>
+            android:onClick="b6"
+            android:text="How to create a conversation?" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="How to delete a conversation?"
-            android:onClick="b7"/>
+            android:onClick="b7"
+            android:text="How to delete a conversation?" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="What if I forgot my password?"
-            android:onClick="b8"/>
+            android:onClick="b8"
+            android:text="What if I forgot my password?" />
 
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back"
-            android:onClick="b9"/>
+            android:onClick="b9"
+            android:text="Back" />
 
     </LinearLayout>
 

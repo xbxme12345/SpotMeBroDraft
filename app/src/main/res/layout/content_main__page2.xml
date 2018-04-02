@@ -19,12 +19,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:text="About Us"
+            android:textAlignment="center"
             android:textSize="32dp"
-            android:text="About Us"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
             android:text=" According to the National Institute of Diabetes and Digestive and Kidney Diseases, two in three adults are considered either overweight or worse, obese. SpotMeBro originated from the lack of an available solution to address the problem of matching skill and availability for weightlifting and exercise partners. "></TextView>
 
         <ImageView

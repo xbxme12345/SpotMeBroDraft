@@ -29,7 +29,8 @@
     <TextView
         android:id="@+id/UIDNavTex"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SpotMeBro! INC" />
+        android:layout_height="35dp"
+        android:text="SpotMeBro! INC"
+        android:textSize="18sp" />
 
 </LinearLayout>
