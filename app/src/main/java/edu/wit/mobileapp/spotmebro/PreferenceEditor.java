@@ -22,6 +22,7 @@ public class PreferenceEditor extends AppCompatActivity {
     private Spinner mPref_gender_input;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("");
+    DatabaseReference myRef1 = database.getReference("");
     private FirebaseAuth mAuth;
     private ArrayList<String> AllTimes;
 
@@ -82,23 +83,27 @@ public class PreferenceEditor extends AppCompatActivity {
         else
         {
         String [] available = availabilities.split(",");
-        for (int i = 1; i < available.length; i++) {
+        for (int i = 0; i < available.length; i++) {
 
-
+            try{
             String[] parts = available[i].split(" ");
-            String Day = parts[0];
-            String Time = parts[1];
-            String AMPM = parts[2];
+            String Day = parts[1];
+            String Time = parts[2];
+            String AMPM = parts[3];
 
             String finaltime = "0";
             String time = Time;
 
-            if (AMPM == "AM") {
-                if (time == "12") {
+            if (AMPM == "AM")
+            {
+                if (time == "12")
+                {
                     Time = "0";
                 }
 
-            } else if (AMPM == "PM") {
+            }
+            else if (AMPM == "PM")
+            {
                 switch (time) {
                     case "1":
                         finaltime = "13";
@@ -141,28 +146,21 @@ public class PreferenceEditor extends AppCompatActivity {
                 Time = finaltime;
             }
 
+            myRef1 = FirebaseDatabase.getInstance().getReference("").child(Day).child(Time).child(user).child("Style");
+            myRef1.setValue(mStyle_input.getSelectedItem().toString());
 
-            myRef = FirebaseDatabase.getInstance().getReference("").child(Day).child(Time).child(user);
-            // set listener to grab users preferences.
-            myRef.child("Style").setValue(mStyle_input.getSelectedItem().toString());
+            }
+            catch(ArrayIndexOutOfBoundsException e)
+            {
+
+            }
         }
 
         }
 
         myRef = FirebaseDatabase.getInstance().getReference("Users").child(user).child("Preferences");
-        // set listener to grab users preferences.
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                myRef.child("Preferred_Gender").setValue(mPref_gender_input.getSelectedItem().toString());
-                myRef.child("Style").setValue(mStyle_input.getSelectedItem().toString());
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+        myRef.child("Preferred_Gender").setValue(mPref_gender_input.getSelectedItem().toString());
+        myRef.child("Style").setValue(mStyle_input.getSelectedItem().toString());
 
 
     }

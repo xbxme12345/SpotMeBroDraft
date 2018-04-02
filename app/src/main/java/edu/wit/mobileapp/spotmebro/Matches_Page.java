@@ -78,7 +78,7 @@ public class Matches_Page extends AppCompatActivity
                 }
                 catch (NullPointerException i)
                 {
-                    temp = ", ";
+                    temp = ",";
                 }
                 String [] available = temp.split(",");
                 for (int i = 0; i < available.length; i++)
@@ -143,7 +143,7 @@ public class Matches_Page extends AppCompatActivity
                 {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
                     {
-                        if(temp != ", ")
+                        if(temp != ",")
                         {
                             String timeset = (listview.getItemAtPosition(position)).toString();
                             Intent gotoTimeMatches = new Intent(Matches_Page.this, HourMatches.class);
