@@ -27,7 +27,7 @@
         <item
             android:id="@+id/Conversations"
             android:icon="@android:drawable/stat_sys_phone_call_forward"
-            android:title="Go to your Converations!" />
+            android:title="Go to your Conversations!" />
     </group>
 
     <item android:title="Communicate">
