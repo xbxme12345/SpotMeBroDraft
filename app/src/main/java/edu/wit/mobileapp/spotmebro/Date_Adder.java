@@ -400,7 +400,7 @@ public class Date_Adder extends AppCompatActivity {
 
                 }
 
-                if (availabilities.contains(  Day + " " + FinalTime + " " + AMPM + ","))
+                if (availabilities.contains(  Day + " " + FinalTime + " " + AMPM))
                 {
                     //Toast.makeText(Date_Adder.this, "Already an added availability", Toast.LENGTH_LONG).show();
                 }
