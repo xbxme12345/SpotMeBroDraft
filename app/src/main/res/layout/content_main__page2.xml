@@ -11,9 +11,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="top"
         android:orientation="vertical"
-        android:gravity="top">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="serif"
+            android:text="Welcome to SpotMeBro!"
+            android:layout_marginBottom="18dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="42dp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -21,21 +34,29 @@
             android:layout_gravity="center"
             android:text="About Us"
             android:textAlignment="center"
-            android:textSize="32dp"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:text=" According to the National Institute of Diabetes and Digestive and Kidney Diseases, two in three adults are considered either overweight or worse, obese. SpotMeBro originated from the lack of an available solution to address the problem of matching skill and availability for weightlifting and exercise partners. "></TextView>
+            android:text=" According to the National Institute of Diabetes and Digestive and Kidney Diseases, two in three adults are considered either overweight or obese. SpotMeBro originated from the lack of available solutions to address the problem of matching skill and availability for weightlifting and exercise partners. "
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"></TextView>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            />
+            android:layout_width="342dp"
+            android:layout_height="211dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/aboutus"
+            android:scaleType="center" />
 
 
     </LinearLayout>

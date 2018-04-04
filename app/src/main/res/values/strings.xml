@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SpotMeBro</string>
+    <string name="app_name">SpotMeBro!</string>
     <string name="title_activity_sign_up">Sign_up</string>
     <string name="gender_button">Gender</string>
     <string name="security_input">Security Question</string>

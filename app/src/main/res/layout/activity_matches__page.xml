@@ -7,68 +7,83 @@
     android:layout_height="match_parent"
     tools:context="edu.wit.mobileapp.spotmebro.Matches_Page">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_gravity="center"
+        android:fontFamily="serif"
+        android:text="Match Availability"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Choose an Availability!"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="60"
-            android:text="After selecting an availability, a list of potential matches is shown!"
-            android:textAlignment="center"
-            android:textSize="14dp" />
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="7dp"
+        android:layout_weight="60"
+        android:fontFamily="serif"
+        android:text="After selecting one of the following availabilities, a list of potential matches will generate"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/newListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-        <ListView
-            android:id="@+id/newListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="56dp"
-            />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="20"
-            android:orientation="horizontal">
-
-
-            <Button
-                android:id="@+id/Logout_Button"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:onClick="signOut"
-                android:text="Logout" />
-
-            <Button
-                android:id="@+id/back_sign"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:onClick="GoToMain"
-                android:text="Back" />
-
-        </LinearLayout>
+    <ListView
+        android:id="@+id/newListView"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="19dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
+    <LinearLayout
+        android:id="@+id/linearLayout14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="13dp"
+        android:layout_weight="20"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newListView">
 
+
+        <Button
+            android:id="@+id/back_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="GoToMain"
+            android:text="Back" />
 
     </LinearLayout>
+
+
+
+
+
 
 </android.support.constraint.ConstraintLayout>

@@ -172,7 +172,7 @@ public class Messages extends AppCompatActivity {
 
     public void GoToMain(View view)
     {
-        startActivity(new Intent(Messages.this, Main_Page2.class));
+        startActivity(new Intent(Messages.this, Conversations.class));
 
     }
 
@@ -180,6 +180,7 @@ public class Messages extends AppCompatActivity {
         formattedDate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
         medittext = (EditText) findViewById(R.id.newmessage);
         myRef.push().setValue(medittext.getText().toString()+"-"+MyApplication.Global_Name+"-"+formattedDate);
+        medittext.setText("");
     }
 
     public class GridItemAdapter extends ArrayAdapter<ListItem> {

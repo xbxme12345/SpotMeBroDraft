@@ -89,4 +89,8 @@ public class Forgot extends AppCompatActivity {
             Toast.makeText(Forgot.this, "Wrong Answer", Toast.LENGTH_LONG).show();
         }
     }
+
+    public void GoToMain(View view) {
+        startActivity(new Intent(Forgot.this, Login.class));
+    }
 }
