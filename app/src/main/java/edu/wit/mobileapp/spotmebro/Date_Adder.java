@@ -235,17 +235,15 @@ public class Date_Adder extends AppCompatActivity {
                                 }
                                 Time = finaltime;
                             }
-                            Time = finaltime;
+
 
 
                             myRef = FirebaseDatabase.getInstance().getReference("").child(Day).child(Time).child(UID);
                             myRef.removeValue();
 
-                            temp = temp.replace(( timeset+","), "");
+                            temp = temp.replace(( parts[0] + " " +finaltime + " " +parts[2]+","), "");
                             myRef = FirebaseDatabase.getInstance().getReference("Users").child(UID).child("Availability");
                             myRef.setValue(temp);
-
-
                         }
 
                     }
@@ -383,7 +381,7 @@ public class Date_Adder extends AppCompatActivity {
         // just want the value at availability
 
 
-        myUser.addValueEventListener(new ValueEventListener()
+        myUser.addListenerForSingleValueEvent(new ValueEventListener()
         {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)

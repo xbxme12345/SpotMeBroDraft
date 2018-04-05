@@ -139,7 +139,7 @@ public class Sign_up extends AppCompatActivity
 
         isthere = false;
         myRef = database.getReference("Users");
-        myRef.addValueEventListener(new ValueEventListener() {
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)
             {
@@ -225,7 +225,7 @@ public class Sign_up extends AppCompatActivity
                                 }
                                 if(!task.isSuccessful())
                                 {
-                                    Toast.makeText(Sign_up.this, "Failed Registration", Toast.LENGTH_LONG).show();
+                                    //Toast.makeText(Sign_up.this, "Failed Registration", Toast.LENGTH_LONG).show();
                                     //message.hide();
                                     return;
                                 }
