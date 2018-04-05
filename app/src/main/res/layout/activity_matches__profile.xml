@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="edu.wit.mobileapp.spotmebro.Matches_Profile">
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="4dp"
-        android:text="Matched User's Profile"
+        android:fontFamily="serif"
+        android:text="Matched Profile"
         android:textAlignment="center"
-        android:textSize="24dp"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +28,9 @@
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
+        android:layout_marginBottom="29dp"
+        android:layout_marginLeft="18dp"
+
         android:layout_marginTop="28dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
@@ -38,13 +41,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
+
             android:text="Name : "
+            android:textColor="@android:color/black"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/Name_output"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -53,28 +63,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="18dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
+
             android:text="Email : "
+            android:textColor="@android:color/black"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/Email_output"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
+        android:layout_marginLeft="18dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="247dp"
@@ -88,24 +109,32 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:text="Gender : "
+            android:textColor="@android:color/black"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/Gender_output"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+
+            android:fontFamily="serif"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
 
     <LinearLayout
+
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:gravity="left|center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,33 +142,25 @@
 
 
         <Button
-            android:id="@+id/Logout_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:onClick="signOut"
-            android:text="Logout" />
-
-        <Button
             android:id="@+id/back_sign"
             android:layout_width="wrap_content"
+
             android:layout_height="match_parent"
+
             android:onClick="GoToMain"
-            android:text="Back" />
+            android:text="Back"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
 
         <Button
             android:id="@+id/newconvo"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginLeft="100dp"
             android:onClick="newconvo"
-            android:text="Create a new Conversation!" />
+            android:text="Create a Conversation!" />
 
     </LinearLayout>
-
-
-
 
 
 

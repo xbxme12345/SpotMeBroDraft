@@ -180,9 +180,9 @@ public class Date_Adder extends AppCompatActivity {
 
 
                             String[] parts = available[0].split(" ");
-                            String Day = parts[1];
-                            String Time = parts[2];
-                            String AMPM = parts[3];
+                            String Day = parts[0];
+                            String Time = parts[1];
+                            String AMPM = parts[2];
 
                             String finaltime = "0";
                             String time = Time;
@@ -400,9 +400,9 @@ public class Date_Adder extends AppCompatActivity {
 
                 }
 
-                if (availabilities.contains(  Day + " " + FinalTime + " " + AMPM + ","))
+                if (availabilities.contains(  Day + " " + FinalTime + " " + AMPM))
                 {
-                    Toast.makeText(Date_Adder.this, "Already an added availability", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(Date_Adder.this, "Already an added availability", Toast.LENGTH_LONG).show();
                 }
                 else
                 {

@@ -8,14 +8,16 @@
 
 
     <TextView
+        android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
         android:text="HELP GUIDE"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
@@ -27,61 +29,82 @@
         android:id="@+id/linearLayout10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:layout_marginTop="7dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="53dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:onClick="b1"
-            android:text="How to find matches?" />
+            android:text="How to find matches?"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:onClick="b2"
-            android:text="How to add availabilities?" />
+            android:text="How to add availabilities?"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:onClick="b3"
-            android:text="How to remove availabilities?" />
+            android:text="How to remove availabilities?"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:onClick="b4"
-            android:text="How to edit preferences?" />
+            android:text="How to edit preferences?"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:onClick="b5"
-            android:text="How to edit profile information?" />
+            android:text="How to edit profile information?"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:onClick="b6"
-            android:text="How to create a conversation?" />
+            android:text="How to create a conversation?"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:onClick="b7"
-            android:text="How to delete a conversation?" />
+            android:text="How to delete a conversation?"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="serif"
             android:onClick="b8"
-            android:text="What if I forgot my password?" />
+            android:text="What if I forgot my password?"
+            android:textColor="@android:color/black" />
 
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="b9"
             android:text="Back" />

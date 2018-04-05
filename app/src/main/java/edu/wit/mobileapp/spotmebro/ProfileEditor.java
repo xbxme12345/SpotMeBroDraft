@@ -101,7 +101,7 @@ public class ProfileEditor extends AppCompatActivity {
 
                 if (isthere == true)
                 {
-                    Toast.makeText(ProfileEditor.this, "Name is already used", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(ProfileEditor.this, "Name is already used", Toast.LENGTH_LONG).show();
                 }
                 else
                 {

@@ -6,64 +6,67 @@
     android:layout_height="match_parent"
     tools:context="edu.wit.mobileapp.spotmebro.Messages">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
+
+    <Button
+        android:id="@+id/back_sign"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:orientation="horizontal">
-
-
-            <Button
-                android:id="@+id/back_sign"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:onClick="GoToMain"
-                android:text="Back" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Messages"
-                android:textAlignment="textStart"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <ListView
-            android:id="@+id/newListView"
-            android:layout_width="match_parent"
-            android:layout_height="377dp"
-            android:background="@android:color/holo_blue_light"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="56dp" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="372dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="296dp"
+        android:onClick="GoToMain"
+        android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif"
+        android:text="Messages"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/newListView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ListView
+        android:id="@+id/newListView"
+        android:layout_width="match_parent"
+        android:layout_height="315dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/back_sign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newListView">
 
         <EditText
             android:id="@+id/newmessage"
             android:layout_width="274dp"
             android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
             android:singleLine="true" />
 
         <Button

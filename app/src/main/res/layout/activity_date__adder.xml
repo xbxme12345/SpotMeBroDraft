@@ -7,95 +7,128 @@
     tools:context="edu.wit.mobileapp.spotmebro.Date_Adder">
 
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="69dp"
+        android:layout_gravity="center"
+        android:fontFamily="serif"
+        android:paddingTop="2dp"
+        android:text="Enter in your Availability"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="29dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+    <LinearLayout
+        android:id="@+id/linearLayout13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:layout_editor_absoluteX="16dp">
+
+        <Spinner
+            android:id="@+id/Day_input"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:dropDownSelector="#aadaff"
+            android:ems="20"
+            android:entries="@array/Days_arrays"
+            android:prompt="@string/Day_string" />
 
-            <Spinner
-                android:id="@+id/Day_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginTop="8dp"
-                android:dropDownSelector="#aadaff"
-                android:ems="20"
-                android:entries="@array/Days_arrays"
-                android:prompt="@string/Day_string" />
-
-            <Spinner
-                android:id="@+id/Time_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginTop="8dp"
-                android:dropDownSelector="#aadaff"
-                android:ems="20"
-                android:entries="@array/Time_arrays"
-                android:prompt="@string/Time_string" />
-
-            <Spinner
-                android:id="@+id/AMPM_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginTop="8dp"
-                android:dropDownSelector="#aadaff"
-                android:ems="20"
-                android:entries="@array/AMPM_arrays"
-                android:prompt="@string/AMPM_string" />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
+        <Spinner
+            android:id="@+id/Time_input"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Click a time to remove it from your Availabilities:"
-            android:textColor="@color/colorAccent"/>
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:dropDownSelector="#aadaff"
+            android:ems="20"
+            android:entries="@array/Time_arrays"
+            android:prompt="@string/Time_string" />
 
-        <ListView
-            android:id="@+id/newListView"
-            android:layout_width="match_parent"
+        <Spinner
+            android:id="@+id/AMPM_input"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:dropDownSelector="#aadaff"
+            android:ems="20"
+            android:entries="@array/AMPM_arrays"
+            android:prompt="@string/AMPM_string" />
 
-        </ListView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/Logout_Button"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:onClick="signOut"
-                android:text="Logout"
-                tools:layout_editor_absoluteX="109dp"
-                tools:layout_editor_absoluteY="0dp" />
-
-            <Button
-                android:id="@+id/back_sign"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:onClick="GoToMain"
-                android:text="Back" />
-
-            <Button
-                android:id="@+id/Enter_Datetime_Button"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:onClick="Enter_in_Datetime"
-                android:text="Enter this Date and Time as your Availability" />
-
-        </LinearLayout>
 
     </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="serif"
+        android:text="Click a time to remove it from your Availabilities:"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/newListView"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout13"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ListView
+
+        android:id="@+id/newListView"
+        android:layout_width="match_parent"
+        android:layout_height="278dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/back_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="GoToMain"
+            android:text="Back" />
+
+        <Button
+            android:id="@+id/Enter_Datetime_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="200dp"
+            android:onClick="Enter_in_Datetime"
+            android:text="Enter" />
+
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>

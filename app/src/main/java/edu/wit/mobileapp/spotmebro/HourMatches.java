@@ -133,8 +133,8 @@ public class HourMatches extends AppCompatActivity {
 
                     for (DataSnapshot ds : dataSnapshots.getChildren())
                     {
-                        //try
-                        //{
+                        try
+                        {
 
                             String useremail = mAuth.getCurrentUser().getEmail();
                             String Style = ds.child("Style").getValue().toString();
@@ -166,11 +166,11 @@ public class HourMatches extends AppCompatActivity {
                                 }
                             }
 
-                        //}
-                        //catch (NullPointerException i)
-                        //{
-                        //    Log.v(TAG, "No values =" + i);
-                        //}
+                        }
+                        catch (NullPointerException i)
+                        {
+                            Log.v(TAG, "No values =" + i);
+                        }
 
                     }
                     if (AllNames.isEmpty())
@@ -244,7 +244,7 @@ public class HourMatches extends AppCompatActivity {
 
     public void GoToMain(View view)
     {
-        startActivity(new Intent(HourMatches.this, Main_Page2.class));
+        startActivity(new Intent(HourMatches.this, Matches_Page.class));
 
     }
 

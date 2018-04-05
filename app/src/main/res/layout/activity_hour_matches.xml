@@ -6,56 +6,60 @@
     android:layout_height="match_parent"
     tools:context="edu.wit.mobileapp.spotmebro.HourMatches">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="List of Matching Users!"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <ListView
-            android:id="@+id/newListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="56dp" />
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="serif"
+        android:text="List of Matching Users"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/newListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/linearLayout15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newListView">
 
 
-            <Button
-                android:id="@+id/Logout_Button"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:onClick="signOut"
-                android:text="Logout" />
-
-            <Button
-                android:id="@+id/back_sign"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Back"
-                android:onClick="GoToMain"/>
-
-        </LinearLayout>
-
-
-
+        <Button
+            android:id="@+id/back_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="GoToMain"
+            android:text="Back" />
 
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/newListView"
+        android:layout_width="368dp"
+        android:layout_height="393dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
 
 </android.support.constraint.ConstraintLayout>

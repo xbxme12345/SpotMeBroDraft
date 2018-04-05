@@ -97,8 +97,6 @@ public class DeleteConversations extends AppCompatActivity {
                             String youremail = MyApplication.Global_Name.toString();
                             String other_email = (listview.getItemAtPosition(position)).toString();
 
-
-
                             conversationID1 = other_email + "-" + youremail;
                             conversationID2 =  youremail + "-" + other_email;
                             String yourUID = mAuth.getCurrentUser().getUid().toString();
