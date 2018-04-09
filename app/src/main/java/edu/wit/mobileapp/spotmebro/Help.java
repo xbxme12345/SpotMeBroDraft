@@ -324,4 +324,45 @@ public class Help extends AppCompatActivity {
     public void b9(View view) {
         startActivity(new Intent(Help.this, Main_Page2.class));
     }
+
+    public void b10(View view) {
+        final AlertDialog.Builder mBuilder = new AlertDialog.Builder(Help.this);
+        final View mView = getLayoutInflater().inflate(R.layout.fragment_add_item, null);
+
+        final TextView mTitle = mView.findViewById(R.id.title);
+        final TextView mtext1 = mView.findViewById(R.id.step1);
+        final TextView mtext2 = mView.findViewById(R.id.step2);
+        final TextView mtext3 = mView.findViewById(R.id.step3);
+        final TextView mtext4 = mView.findViewById(R.id.step4);
+        final TextView mtext5 = mView.findViewById(R.id.step5);
+        final TextView mtext6 = mView.findViewById(R.id.step6);
+        final Button myBtn = mView.findViewById(R.id.confirm_add_button);
+
+        mTitle.setText("What if I want to change my password?");
+        mtext1.setText("If you have forgotten your password you may click on \"Reset Password\" on the login page.");
+        mtext2.setText("Type in the email address associated with your account and click \"Submit\".");
+        mtext3.setText("Your security question will be displayed below.");
+        mtext4.setText("Enter in the answer to your security question.");
+        mtext5.setText("An password reset email will be sent to your email address.");
+        mtext6.setText("Click on the link in the email to reset your password.");
+
+
+        mBuilder.setView(mView);
+        final AlertDialog dialog = mBuilder.create();
+        dialog.show();
+
+        myBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+
+
+
+//
+
+
+            });
+    }
 }
